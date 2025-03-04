@@ -1,2 +1,1 @@
-# bdzLaravel
-БДЗ Laravel по НИСу
+# Весь код в ветке master
