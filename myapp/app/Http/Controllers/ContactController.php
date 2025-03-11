@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -20,8 +21,8 @@ class ContactController extends Controller
             'message' => 'required|string|min:10',
         ]);
 
-        // Отправка письма (если нужно)
-        // Mail::to('admin@example.com')->send(new ContactMail($request->all()));
+
+         Mail::to('egorskorik398@gmail.com')->send(new ContactMail($request->all()));
 
         return redirect()->route('contact.index')->with('success', 'Сообщение отправлено!');
     }
